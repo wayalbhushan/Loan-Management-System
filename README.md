@@ -184,9 +184,9 @@ Both the frontend and backend can be hosted together on **Vercel** as a monorepo
    - `MONGO_URI`: (Your MongoDB Atlas connection string)
    - `JWT_SECRET`: (Your JWT secret string)
    - `JWT_EXPIRES_IN`: `7d`
-   - `CLOUDINARY_CLOUD_NAME`: `dvxkss7s3`
-   - `CLOUDINARY_API_KEY`: `729456831569126`
-   - `CLOUDINARY_API_SECRET`: `FjoE7pV8OVw_Tf2xh0nf_vAymXw`
+   - `CLOUDINARY_CLOUD_NAME`: `cloud`
+   - `CLOUDINARY_API_KEY`: `api_key`
+   - `CLOUDINARY_API_SECRET`: `f_vAymXw`
 4. Click **Deploy**. Vercel will build and host your serverless API (e.g., `https://lms-backend-api.vercel.app`).
 
 ### 2. Frontend Next.js Portal Setup
