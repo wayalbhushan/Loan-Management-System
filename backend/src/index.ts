@@ -25,19 +25,16 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date() });
 });
 
-// Database connection & Server Boot
-const startServer = async () => {
-  try {
-    // Database connection using fail-fast helper
-    await connectDB();
-    
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error('Server failed to start:', error);
-    process.exit(1);
-  }
-};
+// Database connection (top-level trigger for serverless reuse)
+connectDB().catch((err) => {
+  console.error('Database connection failed during boot:', err);
+});
 
-startServer();
+// Server Boot (only run app.listen locally, not in serverless environments like Vercel)
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
+
+export default app;
