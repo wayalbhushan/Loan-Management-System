@@ -20,6 +20,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/borrower', borrowerRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
+// Fallback mounts to support API clients that miss the /api prefix in environment settings
+app.use('/auth', authRoutes);
+app.use('/borrower', borrowerRoutes);
+app.use('/dashboard', dashboardRoutes);
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date() });

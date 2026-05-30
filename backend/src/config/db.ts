@@ -8,7 +8,7 @@ export const connectDB = async (): Promise<typeof mongoose> => {
 
   if (!mongoURI) {
     console.error('CRITICAL ERROR: MONGO_URI environment variable is missing.');
-    process.exit(1);
+    throw new Error('MONGO_URI environment variable is missing.');
   }
 
   try {
@@ -17,6 +17,6 @@ export const connectDB = async (): Promise<typeof mongoose> => {
     return conn;
   } catch (error) {
     console.error('CRITICAL ERROR: Failed to connect to MongoDB:', error);
-    process.exit(1);
+    throw error;
   }
 };
