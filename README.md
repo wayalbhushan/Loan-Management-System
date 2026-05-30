@@ -170,6 +170,37 @@ RBAC is strictly enforced on **both** the frontend and the backend.
 
 ---
 
+## 🌐 Vercel Monorepo Hosting Instructions
+
+Both the frontend and backend can be hosted together on **Vercel** as a monorepo setup:
+
+### 1. Backend Serverless API Setup
+1. In the Vercel dashboard, click **Add New > Project** and import this repository.
+2. Configure the project:
+   - **Name:** `lms-backend-api`
+   - **Framework Preset:** `Other` (detected as standard Node web application)
+   - **Root Directory:** `backend`
+3. Add the following **Environment Variables** under Project Settings:
+   - `MONGO_URI`: (Your MongoDB Atlas connection string)
+   - `JWT_SECRET`: (Your JWT secret string)
+   - `JWT_EXPIRES_IN`: `7d`
+   - `CLOUDINARY_CLOUD_NAME`: `dvxkss7s3`
+   - `CLOUDINARY_API_KEY`: `729456831569126`
+   - `CLOUDINARY_API_SECRET`: `FjoE7pV8OVw_Tf2xh0nf_vAymXw`
+4. Click **Deploy**. Vercel will build and host your serverless API (e.g., `https://lms-backend-api.vercel.app`).
+
+### 2. Frontend Next.js Portal Setup
+1. In the Vercel dashboard, click **Add New > Project** and import this repository again.
+2. Configure the project:
+   - **Name:** `lms-frontend-portal`
+   - **Framework Preset:** `Next.js` (automatically detected)
+   - **Root Directory:** `frontend`
+3. Add the following **Environment Variable** under Project Settings:
+   - `NEXT_PUBLIC_API_URL`: Set this to your deployed backend URL with `/api` path (e.g., `https://lms-backend-api.vercel.app/api`).
+4. Click **Deploy**. Vercel will compile and host your frontend Next.js App Router application (e.g., `https://lms-frontend-portal.vercel.app`).
+
+---
+
 ## 🧪 Running Automated E2E Checks
 The project includes a command-line flow test verifying all state transitions. Run:
 ```bash
