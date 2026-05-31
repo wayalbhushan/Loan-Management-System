@@ -3,6 +3,7 @@
 A premium, secure end-to-end lending platform where Borrowers can apply for loans through a multi-step eligibility wizard, and internal executives manage those loans through their lifecycle stages (Sales Lead, Sanction Review, Disbursement Payout, and Active Collection).
 
 ---
+#LIVE DEMO LINK : https://youtu.be/h6Tphs61cro
 
 ## 🚀 Tech Stack
 
