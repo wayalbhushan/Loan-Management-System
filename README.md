@@ -5,6 +5,29 @@ A premium, secure end-to-end lending platform where Borrowers can apply for loan
 ---
 # LIVE DEMO LINK : https://youtu.be/h6Tphs61cro
 
+# Interface Overview 
+  ## 📸 Project Screenshots
+
+<p align="center">
+  <img src="Screenshot%202026-06-30%20103543.png" width="800">
+</p>
+
+<p align="center">
+  <img src="Screenshot%202026-06-30%20103557.png" width="800">
+</p>
+
+<p align="center">
+  <img src="Screenshot%202026-06-30%20103616.png" width="800">
+</p>
+
+<p align="center">
+  <img src="Screenshot%202026-06-30%20103631.png" width="800">
+</p>
+
+<p align="center">
+  <img src="Screenshot%202026-06-30%20103652.png" width="800">
+</p>
+
 ## 🚀 Tech Stack
 
 - **Frontend:** Next.js (App Router) + TypeScript + Tailwind CSS + Axios + Lucide Icons + Sonner (Toasts)
