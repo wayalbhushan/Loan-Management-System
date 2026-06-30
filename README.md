@@ -5,8 +5,7 @@ A premium, secure end-to-end lending platform where Borrowers can apply for loan
 ---
 # LIVE DEMO LINK : https://youtu.be/h6Tphs61cro
 
-# Interface Overview 
-  ## 📸 Project Screenshots
+  ## 📸 Project Interface
 
 <p align="center">
   <img src="Screenshot%202026-06-30%20103543.png" width="800">
